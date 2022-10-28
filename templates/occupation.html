@@ -1,0 +1,28 @@
+{% extends "home_layout.html" %}
+{% block content %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/occupation.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/occupation.css') }}">
+
+    <script>
+    </script>
+    <div class="row">
+        <div class="col-md-12 text-center occupation_font">
+            What is your current occupation?
+        </div>
+        <div class="col-md-12 text-center cityState_sub_font">
+            The majority occupation of people living in San Francisco, CA is service.
+        </div>
+    </div>
+    <div class="row occupation_form">
+            occupation:
+            <input type='text' id='occupation' name='occupation'></input>
+            <button type='submit' onclick="submitOccupation()">
+                Submit!
+            </button>
+    </div>
+
+{% endblock %}
+
+

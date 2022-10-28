@@ -1,0 +1,34 @@
+{% extends "home_layout.html" %}
+{% block content %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/cityAndState.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cityAndState.css') }}">
+
+    <script>
+    </script>
+    <div class="row">
+        <div class="col-md-12 text-center cityState_font">
+            Which city and state would you like to live in?
+        </div>
+        <div class="col-md-12 text-center cityState_sub_font">
+            There are many great cities and states to live in the United States. Some of our favorites include New York,
+            California, Florida, and Texas.
+        </div>
+    </div>
+    <div class="row cityAndState_form">
+            Country:
+            <input type='text' id='country' name='country'></input>
+            <br> State:
+            <input type='text' id='state' name='state'></input>
+            <br> City:
+            <input type='text' id='city' name='city'></input>
+            <br>
+            <button type='submit' id='submitButton' onclick="submitCountryStateCity()">
+                Submit!
+            </button>
+    </div>
+
+{% endblock %}
+
+
