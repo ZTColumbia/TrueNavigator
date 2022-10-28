@@ -1,13 +1,18 @@
-function callBackend(url, data_file) {
+function submitOccupation(){
+    occupation = document.getElementById("occupation").value
+
+    url = "/occupation_info"
+    data = {"occupation": occupation}
+
     $.ajax({
         url: url,
-        type: "GET",
+        type: "POST",
         async: false,
         cache: false,
         timeout: 30000,
         dataType: "json",
         contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(data_file),
+        data: JSON.stringify(data),
         success: function (response) {
             if (response.redirect) {
                 window.location.href = response.redirect;
@@ -20,10 +25,4 @@ function callBackend(url, data_file) {
             console.log(error);
         }
     });
-}
-
-function startSystem() {
-    url = "/toCityAndState"
-    data = null
-    callBackend(url, data)
 }
