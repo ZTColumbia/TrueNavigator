@@ -11,6 +11,11 @@ def hello_world():
 def homepage():  # put application's code here
     return render_template('homepage.html')
 
+@app.route('/options')
+def options():  # put application's code here
+    return render_template('Options.html')
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
+
