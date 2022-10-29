@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/occupation.css') }}">
 
     <script>
+        let tip = {{ tip| tojson}};
     </script>
     <div class="row">
         <div class="col-md-12 text-center occupation_font">
@@ -21,6 +22,14 @@
             <button type='submit' onclick="submitOccupation()">
                 Submit!
             </button>
+    </div>
+    <div class="row tip">
+        <div class="col-md-12 text-center">
+            Tips:
+        </div>
+        <div class="col-md-12 text-center">
+            {{ tip }}
+        </div>
     </div>
 
 {% endblock %}
