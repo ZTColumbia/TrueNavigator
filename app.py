@@ -3,7 +3,7 @@ from flask import Flask, redirect, url_for, render_template, jsonify, request
 app = Flask(__name__)
 
 user_address_info = dict()
-occupation_info = dict()
+user_occupation_info = dict()
 option_text = ""
 
 @app.route('/')
@@ -52,10 +52,17 @@ def occupation_info():
     global user_address_info
     if request.method == 'POST':
         json_data = request.get_json()
-        occupation_info["occupation"] = json_data['occupation']
-        print(occupation_info)
+        # import pdb
+        # pdb.set_trace()
+        user_occupation_info["occupation"] = json_data['occupation']
+        print(user_occupation_info)
 
-    return jsonify(dict())
+    return jsonify(dict(redirect=f'/toResults'))
+
+
+@app.route('/toResults')
+def render_results():
+    return render_template('options.html')
 
 @app.route('/results', methods=['GET', 'POST'])
 def results():
