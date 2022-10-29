@@ -1,0 +1,28 @@
+{% extends "home_layout.html" %}
+{% block content %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/hobby.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hobby.css') }}">
+
+    <script>
+    </script>
+    <div class="row">
+        <div class="col-md-12 text-center hobby_font">
+            Which building style are you interested in?
+        </div>
+        <div class="col-md-12 text-center hobby_sub_font">
+            Based on your preferred building style I will recommend where to live
+        </div>
+    </div>
+    <div class="row hobby_form">
+            Hobby:
+            <input type='text' id='hobby' name='hobby' placeholder="eg. Hiking"></input>
+            <button type='submit' onclick="submitHobby()">
+                Submit!
+            </button>
+    </div>
+
+{% endblock %}
+
+

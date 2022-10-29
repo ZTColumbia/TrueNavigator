@@ -32,53 +32,53 @@
     What is your interest in this navigation?
   </div>
   <div class="row justify-content-center">
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='amenities') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'amenities.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">facilities/infrastructures/amenities</p>
         </div>
       </div>
     </a>
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='education') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'education.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">education</p>
         </div>
       </div>
     </a>
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='explore') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'explore.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">explore</p>
         </div>
       </div>
     </a>
   </div>
   <div class="row justify-content-center">
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='architecture') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'architecture.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">architecture style</p>
         </div>
       </div>
     </a>
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='hobby') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'hobby.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">hobby</p>
         </div>
       </div>
     </a>
-    <a href="whatever you want">
+    <a href="{{ url_for('results', type='best_overall') }}">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'best_overall.png')}}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">best criteria</p>
         </div>
       </div>
     </a>
