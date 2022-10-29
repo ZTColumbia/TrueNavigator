@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cityAndState.css') }}">
 
     <script>
+    let tip = {{ tip| tojson}};
     </script>
     <div class="row">
         <div class="col-md-12 text-center cityState_font">
@@ -17,7 +18,7 @@
         </div>
     </div>
     <div class="row cityAndState_form">
-            Country:
+            <br>Country:
             <input type='text' id='country' name='country'></input>
             <br> State:
             <input type='text' id='state' name='state'></input>
@@ -27,6 +28,14 @@
             <button type='submit' id='submitButton' onclick="submitCountryStateCity()">
                 Submit!
             </button>
+    </div>
+    <div class="row tip">
+        <div class="col-md-12 text-center">
+            Tips:
+        </div>
+        <div class="col-md-12 text-center">
+            {{ tip }}
+        </div>
     </div>
 
 {% endblock %}
