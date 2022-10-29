@@ -1,0 +1,28 @@
+{% extends "home_layout.html" %}
+{% block content %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/architecture.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/architecture.css') }}">
+
+    <script>
+    </script>
+    <div class="row">
+        <div class="col-md-12 text-center architecture_font">
+            Which building style are you interested in?
+        </div>
+        <div class="col-md-12 text-center architecture_sub_font">
+            Based on your preferred building style I will recommend where to live
+        </div>
+    </div>
+    <div class="row architecture_form">
+            Style:
+            <input type='text' id='architecture' name='architecture' placeholder="eg. brownstone"></input>
+            <button type='submit' onclick="submitArchitecture()">
+                Submit!
+            </button>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/Options.css')}}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #DDDDDD">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{url_for('static', filename='images/'+ 'logo.png')}}"
+             alt="logo" height="50" width="50">
+      </div>
+      <div class="col-md-1">
+        <a class="navbar-brand" href="/">
+          TrueNavigator
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="col-md-12 text-center homepage_font">
+    What is your interest in this navigation?
+  </div>
+  <div class="row justify-content-center">
+    <a href="{{ url_for('results', type='amenities') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'amenities.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">facilities/infrastructures/amenities</p>
+        </div>
+      </div>
+    </a>
+    <a href="{{ url_for('results', type='education') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'education.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">education</p>
+        </div>
+      </div>
+    </a>
+    <a href="{{ url_for('results', type='explore') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'explore.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">explore</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="row justify-content-center">
+    <a href="{{ url_for('results', type='architecture') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'architecture.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">architecture style</p>
+        </div>
+      </div>
+    </a>
+    <a href="{{ url_for('results', type='hobby') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'hobby.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">hobby</p>
+        </div>
+      </div>
+    </a>
+    <a href="{{ url_for('results', type='best_overall') }}">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='images/'+ 'best_overall.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">best criteria</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
